@@ -7,7 +7,7 @@ import time
 
 
 head = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0"}
-img_num = 214
+img_num = 0
 
 
 # URL编码
@@ -42,7 +42,7 @@ def get_url():
     print(img_num)
 
     skin_num = 1
-    times = img_num
+    times = img_num + 1
     i = 0
     while True:
         times -= 1

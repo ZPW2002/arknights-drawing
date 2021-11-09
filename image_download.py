@@ -23,7 +23,7 @@ def img_down(path):
 
     workbook = openpyxl.load_workbook('name.xlsx')
     sheet = workbook.active
-    
+
     os.mkdir(path)
     os.mkdir(path + '/stage1')
     os.mkdir(path + '/stage2')
@@ -49,6 +49,9 @@ def img_down(path):
 
     # 下载皮肤
     for i in range(1, sheet.max_row + 1):
+        if not sheet.cell(i, 4).value:
+            continue
+
         print('下载皮肤中...(%d/%d)' % (i, sheet.max_row))
         temp_url = 'http:' + sheet.cell(i, 4).value
         get_image(str(i), temp_url, path + '/skin/')

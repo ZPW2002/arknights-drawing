@@ -1,6 +1,6 @@
 明日方舟立绘爬虫程序
 
-全部采用python
+采用python编写
 
 立绘来源prts  https://prts.wiki
 
